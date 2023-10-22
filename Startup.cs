@@ -29,7 +29,7 @@ namespace TodoApi
                                   {
                                       policy.WithOrigins("http://dotnet-core-api-mydemo.apps.h66f5y8k.eastus.aroapp.io",
                                                          "http://localhost:5000")
-)                                                         .AllowAnyHeader()
+)                                                        .AllowAnyHeader()
                                                          .AllowAnyMethod();
                                   });
             });
