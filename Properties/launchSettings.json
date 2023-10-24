@@ -10,7 +10,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://dotnet-core-api-mydemo.apps.mvdf18ki.centralindia.aroapp.io"
+      "applicationUrl": "http://localhost:5000"
     }
   }
 }
