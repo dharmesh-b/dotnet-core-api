@@ -29,7 +29,9 @@ namespace TodoApi
                                   {
                                       policy.WithOrigins("http://dotnet-core-api-mydemo.apps.mvdf18ki.centralindia.aroapp.io","http://localhost:5000")
                                                          .AllowAnyHeader()
-                                                         .AllowAnyMethod();
+                                                         .AllowAnyMethod()
+                                                         .AllowAnyOrigin()
+                                                         .AllowCredentials();
                                   });
             });
             services.AddControllers();
@@ -68,10 +70,10 @@ namespace TodoApi
             app.UseStaticFiles();
 
             app.UseRouting();
-
-            app.UseCors(MyAllowSpecificOrigins);
             
             app.UseAuthorization();
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseEndpoints(endpoints =>
             {
