@@ -30,7 +30,6 @@ namespace TodoApi
                                       policy.WithOrigins("http://dotnet-core-api-mydemo.apps.mvdf18ki.centralindia.aroapp.io","http://localhost:5000")
                                                          .AllowAnyHeader()
                                                          .AllowAnyMethod()
-                                                         .AllowAnyOrigin()
                                                          .AllowCredentials();
                                   });
             });
