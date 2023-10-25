@@ -70,6 +70,8 @@ namespace TodoApi
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseAuthentication();
             
             app.UseAuthorization();
 
