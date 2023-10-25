@@ -11,7 +11,7 @@ angular.module('todoApp', ['ngRoute'])
     $routeProvider.when("/Home", {
         controller: "todoListCtrl",
     //    templateUrl: "/App/Views/TodoList.html",
-        templateUrl: "http://localhost:5000/App/Views/TodoList.html",
+        templateUrl: "/App/Views/TodoList.html",
     }).otherwise({ redirectTo: "/Home" });
 
     }]);
