@@ -34,7 +34,7 @@ namespace TodoApi
                                                         
                                   });
             });
-            services.AddAuthorization();
+            
             services.AddControllers();
 
             // Register the Swagger generator, defining 1 or more Swagger documents
