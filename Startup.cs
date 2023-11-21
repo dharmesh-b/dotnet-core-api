@@ -27,7 +27,7 @@ namespace TodoApi
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                                   policy =>
                                   {
-                                      policy.WithOrigins("http://dotnet-core-api-mydemo.apps.fm7gdyl2.centralindia.aroapp.io/")
+                                      policy.WithOrigins("*")
                                                          .AllowAnyHeader()
                                                          .AllowAnyMethod()
                                                          .SetIsOriginAllowed(origin => true) // allow any origin
