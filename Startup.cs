@@ -27,13 +27,14 @@ namespace TodoApi
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                                   policy =>
                                   {
-                                      policy.WithOrigins("http://dotnet-core-api-mydemo.apps.fm7gdyl2.centralindia.aroapp.io/","http://localhost:5000")
+                                      policy.WithOrigins("http://dotnet-core-api-mydemo.apps.fm7gdyl2.centralindia.aroapp.io/")
                                                          .AllowAnyHeader()
                                                          .AllowAnyMethod()
                                                          .SetIsOriginAllowed(origin => true) // allow any origin
                                                          .AllowCredentials();
                                   });
             });
+            services.AddAuthorization();
             services.AddControllers();
 
             // Register the Swagger generator, defining 1 or more Swagger documents
@@ -70,12 +71,12 @@ namespace TodoApi
             app.UseStaticFiles();
 
             app.UseRouting();
+            
+            app.UseCors("MyAllowSpecificOrigins");
 
             app.UseAuthentication();
             
             app.UseAuthorization();
-
-            app.UseCors("MyAllowSpecificOrigins");
 
             app.UseEndpoints(endpoints =>
             {
