@@ -74,10 +74,6 @@ namespace TodoApi
             
             app.UseCors("MyAllowSpecificOrigins");
 
-            app.UseAuthentication();
-            
-            app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
