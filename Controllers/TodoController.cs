@@ -12,7 +12,7 @@ using TodoApi.Models;
 
 namespace TodoApi.Controllers
 {
-    [EnableCors("MyAllowSpecificOrigins")]
+    [EnableCors]
     [Route("api/[controller]")] 
     [ApiController]
     public class TodoController : Controller
