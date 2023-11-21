@@ -30,8 +30,8 @@ namespace TodoApi
                                       policy.WithOrigins("*")
                                                          .AllowAnyHeader()
                                                          .AllowAnyMethod()
-                                                         .SetIsOriginAllowed(origin => true) // allow any origin
-                                                         .AllowCredentials();
+                                                         .SetIsOriginAllowed(origin => true); // allow any origin
+                                                        
                                   });
             });
             services.AddAuthorization();
